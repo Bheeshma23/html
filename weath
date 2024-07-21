@@ -1,0 +1,124 @@
+2210520077_bheeshma, [18-07-2024 12:18]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Navigation Menu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Your main content goes here -->
+        <section id="home">
+            <h2>Home Section</h2>
+            <p>Welcome to the home section.</p>
+        </section>
+
+        <section id="about">
+            <h2>About Section</h2>
+            <p>Learn more about us.</p>
+        </section>
+
+        <section id="services">
+            <h2>Services Section</h2>
+            <p>Our services are top-notch.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Section</h2>
+            <p>Get in touch with us.</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+2210520077_bheeshma, [18-07-2024 12:19]
+/* Reset default styles and apply some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    z-index: 1000; /* Ensure it's above other content */
+    transition: background-color 0.3s ease-in-out; /* Smooth transition for background color change */
+}
+
+#navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+#navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+#navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: color 0.3s ease-in-out; /* Smooth transition for text color change */
+}
+
+#navbar ul li a:hover {
+    color: #ffcc00; /* Change text color on hover */
+}
+
+/* Additional styles for the main content */
+main {
+    padding-top: 70px; /* Ensure content starts below the fixed header */
+    height: 2000px; /* Just for demonstration purpose */
+}
+
+section {
+    padding: 20px;
+    margin: 50px 0;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+}
+
+2210520077_bheeshma, [18-07-2024 12:19]
+// JavaScript for changing the navigation menu's background color on scroll
+window.addEventListener('scroll', function() {
+    var header = document.querySelector('header');
+    var scrollPosition = window.scrollY;
+
+    if (scrollPosition > 100) { // Adjust as needed
+        header.style.backgroundColor = '#555'; // Change background color on scroll
+    } else {
+        header.style.backgroundColor = '#333'; // Revert to original color
+    }
+});
